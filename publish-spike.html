@@ -4,7 +4,7 @@ html {
 	margin: auto;
 	background-color: #E5E5E5;
 }
-#wrapper {
+.wrapper {
 	display: inline-block;
 	width: 980px;
 	border: 1px solid #CDCDD0;
@@ -13,7 +13,7 @@ html {
 	background-color: #FFF;
 	border-collapse: collapse;
 }
-#nav {
+.nav {
 	width: 166px;
 	padding-left: 10px;
 	padding-top: 27px;
@@ -30,7 +30,12 @@ thead {
 th {
 	padding-top: 10px;
 }
-#content {
+thead tr td {
+	color: #323333;
+	font-size: 12px;
+    font-weight: 700;
+}
+.content {
 	width: 81%;
 	border-left: 5px solid #D5D5D5;
 	border-right: 5px solid #D5D5D5;
@@ -83,16 +88,16 @@ td img {
 	padding-right: 5px;
 	padding-bottom: 3px;
 }
-#th-one {
+.th-one {
 	width: 60%;
 }
-#th-two {
+.th-two {
 	width: 20%;
 }
-#th-three {
+.th-three {
 	width: 15%;
 }
-#th-four {
+.th-four {
 	width: 21%;
 }
 .bubble {
@@ -135,23 +140,15 @@ span {
     text-overflow: ellipsis;
     padding-top: 4px;
 }
-.no-ellipsis {
-	display: block;
-    padding-top: 4px;
-}
 .calendar {
 	border: 1px solid #D5D5D5;
 	margin-left: 10px;
 	width: 155px;
 }
-.month {
-	text-align: center;
-	margin: auto;
-}
 .white {
 	background-color: #FFF;
 }
-.previous {
+.button {
 	width: 10px;
 }
 .no-fixed {
@@ -160,30 +157,45 @@ span {
 .align-right {
 	text-align: right;
 }
+.align-left {
+	text-align: left;
+}
+.align-center {
+	text-align: center;
+}
+.inline {
+	display: inline;
+}
+.fnt-wt-200 {
+	font-weight: 200;
+}
+.ghosted {
+	color: D5D5D5;
+}
 </style>
 <html>
-<div id="wrapper">
-	<div id="nav" class="left">
+<div class="wrapper">
+	<div class="nav left">
 		<ul>
 			<a href="#"><li class="white"><div class="bubble-single">1</div><h2>PENDING</h2></li></a>
 			<a href="#"><li><div class="bubble">88</div><h2>UPCOMING</h2></li></a>
 			<a href="#"><li class="white"><h2>RECENT</h2></li></a>
 		</ul>
 	</div>
-	<div id="content" class="right">
+	<div class="content right">
 		<table class="color-rows">
 			<thead>
 				<tr>
-					<th id="th-one"><h1>Post</h1></th>
-					<th id="th-two"><h1>Author</h1></th>
-					<th id="th-three"><h1>Targeting</h1></th>
-					<th id="th-four"><h1>Date</h1></th>
+					<th class="th-one"><h1>Post</h1></th>
+					<th class="th-two"><h1>Author</h1></th>
+					<th class="th-three"><h1>Targeting</h1></th>
+					<th class="th-four"><h1>Date</h1></th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<td><span><img src="file://localhost/Users/ianniemi/Desktop/Work/platform/public/images/ico-fb.png" alt="img"><a href="#">PIECE Tommy Bahama into your Sunday Funday. Today is your last chance to get  this puzzle for 50% off with any $50 purchase! : puzzle.JPG</a></span></td>
-					<td class="no-ellipsis"><span>chad.rutan@tommybahama.com</span></td>
+					<td><span>chad.rutan@tommybahama.com</span></td>
 					<td><span>Scottsdale-I</span></td>
 					<td><span>Sun Sep 15 @ 10:00 AM</span></td>
 				</tr>
@@ -227,30 +239,37 @@ span {
 		</table>
 	</div>
 	<div class="calendar left">
-		
-			<div style="text-align:center; padding: 5px">
-				<tr class="white">
-					<th class="month" colspan="8"><img class="previous left" src="file://localhost/Users/ianniemi/Desktop/Work/platform/public/images/bkg_previous.png" alt="img">Feb 2008<img class="previous right" src="file://localhost/Users/ianniemi/Desktop/Work/platform/public/images/bkg_next.png" alt="img"></th>
-				<tr>
+		<div style="padding: 5px;">
+			<div class="align-center white">
+				<div class="left">
+					<a href="#"><img src="file://localhost/Users/ianniemi/Desktop/Work/platform/public/images/bkg_previous.png" alt="img"></a>
+				</div>
+				<div class="inline">
+					Feb 2008
+				</div>
+				<div class="right">
+					<a href="#"><img src="file://localhost/Users/ianniemi/Desktop/Work/platform/public/images/bkg_next.png" alt="img"></a>
+				</div>
 			</div>
+		</div>
 			<div style="padding-left: 5px;">
 				<table class="no-fixed">
 					<thead class="white">
 						<tr>
-							<th>S</th>
-							<th>M</th>
-							<th>T</th>
-							<th>W</th>
-							<th>Th</th>
-							<th>F</th>
-							<th>S</th>
+							<td>S</td>
+							<td>M</td>
+							<td>T</td>
+							<td>W</td>
+							<td>Th</td>
+							<td>F</td>
+							<td>S</td>
 						</tr>
 					</thead>
-					<tbody>
+					<tbody class="fnt-wt-200">
 					<tr>
-						<td>28</td>
-						<td>29</td>
-						<td>30</td>
+						<td class="ghosted">28</td>
+						<td class="ghosted">29</td>
+						<td class="ghosted">30</td>
 						<td>1</td>
 						<td>2</td>
 						<td>3</td>
@@ -289,8 +308,8 @@ span {
 						<td>28</td>
 						<td>29</td>
 						<td>30</td>
-						<td>1</td>
-						<td>2</td>
+						<td class="ghosted">1</td>
+						<td class="ghosted">2</td>
 					</tr>
 				</tbody>
 			</table>
