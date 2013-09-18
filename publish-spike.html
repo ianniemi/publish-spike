@@ -45,6 +45,7 @@ h1 {
 	font-size: 18px;
 	font-weight: 500;
 	color: #323333;
+	display: inline;
 }
 h2 {
 	font-size: 14px;
@@ -57,9 +58,18 @@ h2 {
 .left {
 	float: left;
 }
+a {
+	color: #0C498D;
+}
+a:hover{
+	color:gray;
+}
 ul {
 	list-style-type: none;
 	padding-left: 0px;
+}
+ul a {
+	text-decoration: none;
 }
 li {
 	border: 1px solid #D5D5D5;
@@ -67,10 +77,6 @@ li {
 	text-align: center;
 	margin-bottom: 5px;
 	border-right: none;
-}
-a {
-	text-decoration: none;
-	color:#323333;
 }
 .color-rows tr:nth-child(odd) td { background-color: #EDF0F2; }
 .color-rows tr:nth-child(even) td { background-color: #FFF; }
@@ -175,9 +181,39 @@ span {
 .ghosted {
 	color: D5D5D5;
 }
+.button {
+	color: #FFF;
+	background-color: #00a1cb;
+	vertical-align: middle;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	text-decoration: none;
+	width: 100px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin: 0px 5px 10px 0px;
+	-webkit-box-shadow: 4px 4px 5px rgba(50, 50, 50, 1);
+	-moz-box-shadow:    4px 4px 5px rgba(50, 50, 50, 1);
+	box-shadow:         4px 4px 5px rgba(50, 50, 50, 1);
+}
+.button a {
+	text-decoration: none;
+	color: #FFF;
+}
+.funk {
+	margin: 10px 0px 0px 30px;
+}
+.clear {
+	clear:both;
+}
 </style>
 <html>
 <div class="wrapper">
+	<div class="funk left"><h1>Publishing</h1> at <a href="#">all locations</a></div>
+	<div class="button right"><a href="#">Create</a></div>
+	<div class="clear"></div>
 	<div class="nav left">
 		<ul>
 			<a href="#"><li class="white"><div class="bubble-single">1</div><h2>PENDING</h2></li></a>
